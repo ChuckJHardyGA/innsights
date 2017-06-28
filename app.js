@@ -1,8 +1,10 @@
-front.on('conversation', function (event) {
-  log(event.contact.handle);
+Front.on('conversation', function (event) {
+  log(event.message.text);
 });
 
 function log(msg) {
-  var $log = document.getelementbyid('log');
-  $log.innerhtml = $log.innerhtml + '<br>' + msg;
+  console.log(msg);
+
+  var $log = document.getElementById('log');
+  $log.innerHTML = $log.innerHTML + '<br>' + msg;
 }
